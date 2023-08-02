@@ -1,0 +1,60 @@
+types of recomendation
+1) Content based(tags me divide kartat)
+2) Collaborating filtering(user interest based recomandatin)
+3) Hybride
+
+
+Project Flow discussion
+1) Data preprocessing
+2) model building
+3) convert into webside
+4) deploy
+
+Necessary things 
+1) generes
+2) id
+3) keywords
+4) title
+5) Overview
+6) Cast
+7) Crew
+
+We creating the new dataset from the modified dataset 
+which contains columns
+1) Movie-Id
+2)Movie_title
+3)tags
+
+tags = (overvies+genres+keywords+casr+crew)
+
+
+Test Vector :
+
+convert text into the vector (textvectors)
+
+
+cosing distance
+distance is directaly proportional to the similarities
+
+techniquies
+1) bag of words(combine all tags)
+mix all the tags and calculate the frequency of occuring 
+
+note : we are not using the stopwords (and , or, if, else, frome, etc)
+and them perform the vectorization on all the remaining words
+
+combines all tags and make huge list called as "corpos"
+
+2) tf idf
+3) word to veg
+
+
+my api key with movie id
+https://api.themoviedb.org/3/movie/285?api_key=db95f2f01eedd182a77ec82079565756&language=en-US
+
+my api
+db95f2f01eedd182a77ec82079565756
+
+my json format
+
+{"adult":false,"backdrop_path":"/kPcHuPYqzkSo4bmPHtH82GaeEgX.jpg","belongs_to_collection":{"id":295,"name":"Pirates of the Caribbean Collection","poster_path":"/p9fXIvNppK21fCHAEkznSZb8hnv.jpg","backdrop_path":"/wxgD3fB5lQ2sGJLog0rvXW049Pf.jpg"},"budget":300000000,"genres":[{"id":12,"name":"Adventure"},{"id":14,"name":"Fantasy"},{"id":28,"name":"Action"}],"homepage":"https://movies.disney.com/pirates-of-the-caribbean-at-worlds-end","id":285,"imdb_id":"tt0449088","original_language":"en","original_title":"Pirates of the Caribbean: At World's End","overview":"Captain Barbossa, long believed to be dead, has come back to life and is headed to the edge of the Earth with Will Turner and Elizabeth Swann. But nothing is quite as it seems.","popularity":80.868,"poster_path":"/jGWpG4YhpQwVmjyHEGkxEkeRf0S.jpg","production_companies":[{"id":130,"logo_path":"/c9dVHPOL3cqCr2593Ahk0nEKTEM.png","name":"Jerry Bruckheimer Films","origin_country":"US"},{"id":19936,"logo_path":null,"name":"Second Mate Productions","origin_country":"US"},{"id":2,"logo_path":"/wdrCwmRnLFJhEoH8GSfymY85KHT.png","name":"Walt Disney Pictures","origin_country":"US"}],"production_countries":[{"iso_3166_1":"US","name":"United States of America"}],"release_date":"2007-05-19","revenue":961000000,"runtime":169,"spoken_languages":[{"english_name":"English","iso_639_1":"en","name":"English"}],"status":"Released","tagline":"At the end of the world, the adventure begins.","title":"Pirates of the Caribbean: At World's End","video":false,"vote_average":7.24,"vote_count":13172}
